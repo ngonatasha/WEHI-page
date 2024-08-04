@@ -1,0 +1,335 @@
+<!-- CSS Style -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>RSEAA</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            padding: 30px;
+        }
+
+        #time {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        select {
+            width: 300px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .event-date,
+        .event-time {
+            color: blue;
+        }
+
+        .header-label {
+            color: #571845;
+        }
+    </style>
+</head>
+
+
+<!-- HTML -->
+
+<body>
+    <h1 class="header-label">RSEAA24 - A research software community event for Asia and Australia</h1>
+    <label for="timezone-select">Select Time Zone:</label>
+    <select id="timezone-select">
+        <!-- Common Time Zones, can add more here -->
+        <option value="UTC">UTC (Coordinated Universal Time)</option>
+        <option value="America/New_York">Eastern Time (US & Canada)</option>
+        <option value="America/Chicago">Central Time (US & Canada)</option>
+        <option value="America/Denver">Mountain Time (US & Canada)</option>
+        <option value="America/Los_Angeles">Pacific Time (US & Canada)</option>
+        <option value="Europe/London">Greenwich Mean Time (GMT)</option>
+        <option value="Europe/Paris">Central European Time (CET)</option>
+        <option value="Europe/Berlin">Central European Time (CET)</option>
+        <option value="Europe/Moscow">Moscow Standard Time (MSK)</option>
+        <option value="Asia/Dubai">Gulf Standard Time (GST)</option>
+        <option value="Asia/Tokyo">Japan Standard Time (JST)</option>
+        <option value="Asia/Shanghai">China Standard Time (CST)</option>
+        <option value="Asia/Singapore">Singapore Time (SGT)</option>
+        <option value="Australia/Sydney">Australian Eastern Time (AEST)</option>
+        <option value="Asia/Kolkata">India Standard Time (IST)</option>
+        <option value="America/Sao_Paulo">Brasilia Time (BRT)</option>
+        <option value="Africa/Johannesburg">South Africa Standard Time (SAST)</option>
+    </select>
+
+    <div id="time">Current Time: </div>
+
+
+    <!-- Key dates -->
+
+    <h2>Key Dates</h2>
+    <table id="key-dates">
+        <!-- Key date headers -->
+        <thead>
+            <tr>
+                <th>Dates</th>
+                <th>Deadlines/Events</th>
+            </tr>
+        </thead>
+        <!-- Key date data -->
+        <tbody>
+            <tr>
+                <td><span class="event-date" data-date="2024-06-19T02:00:00Z">19th June 12pm UTC+10 (Wednesday)</span>
+                </td>
+                <td>Start of registration and scholarships and micro-grant applications</td>
+            </tr>
+            <tr>
+                <td><span class="event-date" data-date="2024-07-26T07:00:00Z">26th July 5pm UTC+10 (Friday) – Date
+                        extended!</span></td>
+                <td>End of scholarship and micro-grant applications</td>
+            </tr>
+            <tr>
+                <td><span class="event-date" data-date="2024-08-14T02:00:00Z">14th August 12pm UTC+10 (Wednesday)</span>
+                </td>
+                <td>End of poster submission for eligible scholarship and micro-grant applicants and end of early bird
+                    registrations</td>
+            </tr>
+            <tr>
+                <td><span class="event-date" data-date="2024-09-06T02:00:00Z">6th September 12pm UTC+10 (Friday)</span>
+                </td>
+                <td>End of registration</td>
+            </tr>
+            <tr>
+                <td><span class="event-date" data-date="2024-09-10T02:30:00Z">10th September 12:30pm UTC+10
+                        (Tuesday)</span></td>
+                <td>Leaders forum</td>
+            </tr>
+            <tr>
+                <td><span class="event-date" data-date="2024-09-11T02:30:00Z">11th September 12:30pm UTC+10
+                        (Wednesday)</span></td>
+                <td>Start of Day 1 of the unconference</td>
+            </tr>
+            <tr>
+                <td><span class="event-date" data-date="2024-09-12T02:30:00Z">12th September 12:30pm UTC+10
+                        (Thursday)</span></td>
+                <td>Start of Day 2 of the unconference</td>
+            </tr>
+            <tr>
+                <td><span class="event-date" data-date="2024-09-13T02:30:00Z">13th September 12:30pm UTC+10
+                        (Friday)</span></td>
+                <td>Start of day 3 and end of discussion topic submissions</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Schedule -->
+    <h2>Schedule</h2>
+    <table id="event-schedule">
+        <!-- Schedule headers -->
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Leaders Forum - Tue 10th Sep 2024</th>
+                <th>Day 1 - Wed 11th Sep 2024</th>
+                <th>Day 2 - Thu 12th Sep 2024</th>
+                <th>Day 3 - Fri 13th Sep 2024</th>
+            </tr>
+        </thead>
+        <!-- Schedule data -->
+        <tbody>
+            <tr>
+                <td><span class="event-time" data-time="2024-09-10T02:30:00Z">12:30 PM</span></td>
+                <td>Opportunity to meet informally</td>
+                <td>Opportunity to meet informally</td>
+                <td>Opportunity to meet informally</td>
+                <td>Opportunity to meet informally</td>
+            </tr>
+            <tr>
+                <td><span class="event-time" data-time="2024-09-10T03:00:00Z">1:00 PM</span></td>
+                <td>Welcome, Vision and Survey</td>
+                <td>Welcome, Vision, Explanation, and Partners</td>
+                <td>Explain, Review</td>
+                <td>Explain, Review</td>
+            </tr>
+            <tr>
+                <td><span class="event-time" data-time="2024-09-10T03:30:00Z">1:30 PM</span></td>
+                <td>Introductions</td>
+                <td>Keynote 1</td>
+                <td>Keynote 2</td>
+                <td>Strategy and Policy Panel</td>
+            </tr>
+            <tr>
+                <td><span class="event-time" data-time="2024-09-10T04:00:00Z">2:00 PM</span></td>
+                <td>Initial Leaders Session</td>
+                <td>First Session</td>
+                <td>Third Session</td>
+                <td>Strategy and Policy Panel</td>
+            </tr>
+            <tr>
+                <td><span class="event-time" data-time="2024-09-10T04:30:00Z">2:30 PM</span></td>
+                <td>Initial Leaders Session</td>
+                <td>First Session</td>
+                <td>Third Session</td>
+                <td>Strategy and Policy Panel</td>
+            </tr>
+            <tr>
+                <td><span class="event-time" data-time="2024-09-10T05:00:00Z">3:00 PM</span></td>
+                <td>Break</td>
+                <td>Break</td>
+                <td>Break</td>
+                <td>Break</td>
+            </tr>
+            <tr>
+                <td><span class="event-time" data-time="2024-09-10T05:30:00Z">3:30 PM</span></td>
+                <td>Second Leaders Session</td>
+                <td>Second Session</td>
+                <td>Poster Session</td>
+                <td>Actionable items</td>
+            </tr>
+            <tr>
+                <td><span class="event-time" data-time="2024-09-10T06:00:00Z">4:00 PM</span></td>
+                <td>Second Leaders Session</td>
+                <td>Second Session</td>
+                <td>Poster Session</td>
+                <td>Actionable items</td>
+            </tr>
+            <tr>
+                <td><span class="event-time" data-time="2024-09-10T06:30:00Z">4:30 PM</span></td>
+                <td>Review and discussion</td>
+                <td>Review and discussion</td>
+                <td>Review and discussion</td>
+                <td>Close and thank you</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- Javascript -->
+
+    <script>
+        const timeZoneAbbreviations = {
+            'UTC': 'UTC',
+            'America/New_York': 'EDT',
+            'America/Chicago': 'CDT',
+            'America/Denver': 'MDT',
+            'America/Los_Angeles': 'PDT',
+            'Europe/London': 'BST',
+            'Europe/Paris': 'CEST',
+            'Europe/Berlin': 'CEST',
+            'Europe/Moscow': 'MSK',
+            'Asia/Dubai': 'GST',
+            'Asia/Tokyo': 'JST',
+            'Asia/Shanghai': 'CST',
+            'Asia/Singapore': 'SGT',
+            'Australia/Sydney': 'AEST',
+            'Asia/Kolkata': 'IST',
+            'America/Sao_Paulo': 'BRT',
+            'Africa/Johannesburg': 'SAST'
+        };
+
+        let selectedTimeZone = 'UTC';
+
+        // Get current time in a specified time zone with full date format
+        function getCurrentTimeWithDate(timeZone) {
+            const options = {
+                timeZone: timeZone,
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false,
+            };
+
+            return new Intl.DateTimeFormat('en-US', options).format(new Date());
+        }
+
+        // Update time display
+        function updateTimeDisplay() {
+            const timeElement = document.getElementById('time');
+            const currentTime = getCurrentTimeWithDate(selectedTimeZone);
+            timeElement.textContent = `Current Time: ${currentTime} ${timeZoneAbbreviations[selectedTimeZone]}`;
+        }
+
+        // Convert key event dates to the selected time zone
+        function updateEventDates() {
+            const eventDates = document.querySelectorAll('.event-date');
+            eventDates.forEach(dateElement => {
+                const utcDate = dateElement.getAttribute('data-date');
+                const eventDate = new Date(utcDate);
+
+                const options = {
+                    timeZone: selectedTimeZone,
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    hour12: false,
+                    weekday: 'long'
+                };
+
+                const formattedDate = new Intl.DateTimeFormat('en-US', options).format(eventDate);
+                const timeZoneAbbr = timeZoneAbbreviations[selectedTimeZone];
+                dateElement.textContent = `${formattedDate} ${timeZoneAbbr}`;
+            });
+        }
+
+        // Convert schedule times to the selected time zone
+        function updateEventTimes() {
+            const eventTimes = document.querySelectorAll('.event-time');
+            eventTimes.forEach(timeElement => {
+                const utcTime = timeElement.getAttribute('data-time');
+                const eventTime = new Date(utcTime);
+
+                const options = {
+                    timeZone: selectedTimeZone,
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    hour12: false
+                };
+
+                const formattedTime = new Intl.DateTimeFormat('en-US', options).format(eventTime);
+                const timeZoneAbbr = timeZoneAbbreviations[selectedTimeZone];
+                timeElement.textContent = `${formattedTime} ${timeZoneAbbr}`;
+            });
+        }
+
+        // Event listener for the time zone button
+        document.getElementById('timezone-select').addEventListener('change', () => {
+            const selectElement = document.getElementById('timezone-select');
+            selectedTimeZone = selectElement.value;
+            updateTimeDisplay();
+            updateEventDates();
+            updateEventTimes();
+        });
+
+        // Update time every second
+        setInterval(updateTimeDisplay, 1000);
+
+        // Initial time update
+        updateTimeDisplay();
+        updateEventDates();
+        updateEventTimes();
+    </script>
+</body>
+
+</html>
